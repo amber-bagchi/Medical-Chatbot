@@ -6,6 +6,7 @@ from langchain.prompts import PromptTemplate
 from langchain_pinecone import PineconeVectorStore
 from langchain.vectorstores import Pinecone as LangchainPinecone
 import os
+import re
 from langchain_pinecone import PineconeVectorStore
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFaceEndpoint
@@ -40,33 +41,59 @@ chain_type_kwargs={"prompt": PROMPT}
 KEY=os.getenv("HUGGINGFACE_API_KEY")
 
 login(KEY)
-
-llm =HuggingFaceEndpoint(
+llm = HuggingFaceEndpoint(
     repo_id="meta-llama/Meta-Llama-3-8B-Instruct",
-    temperature= 0.5,
+    temperature=0.6,
+    max_tokens=150,             
     token=KEY
 )
 
-qa=RetrievalQA.from_chain_type(
+# Initialize the RetrievalQA chain
+qa = RetrievalQA.from_chain_type(
     llm=llm, 
     chain_type="stuff", 
     retriever=docsearch.as_retriever(search_kwargs={'k': 2}),
     return_source_documents=True, 
-    chain_type_kwargs=chain_type_kwargs)
+    chain_type_kwargs=chain_type_kwargs
+)
+
+import re
+
+def clean_response(text):
+    # Remove disclaimers or repetitive content
+    text = re.sub(r'(?i)if you don\'t know the answer,.*', '', text)
+    text = re.sub(r'(?i)please note that this information.*', '', text)
+    
+    # Remove any content after specific phrases like "Note:", "Best regards,", or "[Your Name]"
+    text = re.split(r"(Note:|Best regards,|\[Your Name\])", text)[0]
+
+    # Remove duplicate sentences
+    sentences = re.split(r'(?<=[.!?]) +', text)
+    seen = set()
+    cleaned_sentences = []
+    for sentence in sentences:
+        if sentence.strip() and sentence not in seen:
+            cleaned_sentences.append(sentence.strip())
+            seen.add(sentence.strip())
+    
+    cleaned_text = ' '.join(cleaned_sentences).strip()
+    return cleaned_text
 
 
+# Define the index route to serve the chat HTML page
 @app.route("/")
 def index():
     return render_template('chat.html')
 
+# Define the chat route to handle POST requests
 @app.route("/get", methods=["GET", "POST"])
 def chat():
     msg = request.form["msg"]
-    input = msg
-    print(input)
-    result=qa({"query": input})
-    print("Response : ", result["result"])
-    return str(result["result"])
+    result = qa({"query": msg})
+    answer = clean_response(result["result"])
+    print("Response:", answer)
+    return str(answer)
 
+# Run the Flask app
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port = 8080, debug=True)
+    app.run(host="0.0.0.0", port=8080, debug=True)
