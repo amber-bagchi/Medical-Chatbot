@@ -59,3 +59,8 @@ python app.py
 - Flask
 - Hugging Face Hub
 - Pinecone
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE
+[MIT](https://choosealicense.com/licenses/mit/) file for more details.
