@@ -14,6 +14,7 @@ git clone https://github.com/amber-bagchi/Medical-Chatbot.git
 ```
 ```bash
 cd End-to-End-Medical-Chatbot-using-Llama3
+
 ```
 
 ### 2️⃣ Create and Activate a Conda Environment
@@ -59,6 +60,12 @@ python app.py
 - Flask
 - Hugging Face Hub
 - Pinecone
+
+## 📸 Screenshots
+
+Here is a screenshot of the application:
+
+![mchatb](https://github.com/user-attachments/assets/8b81760c-f299-4637-9c6f-e0745b55a595)
 
 ## License
 
