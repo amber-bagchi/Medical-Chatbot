@@ -32,6 +32,7 @@
                         <form id="messageArea" class="input-group">
                             <input type="text" id="text" name="msg" placeholder="Type your message..." autocomplete="off" class="form-control type_msg" required>
                             <div class="input-group-append">
+                                <button type="button" id="voiceInput" class="input-group-text send_btn"><i class="fas fa-microphone"></i></button>
                                 <button type="submit" id="send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></button>
                             </div>
                         </form>
@@ -43,6 +44,24 @@
 
     <script>
         $(document).ready(function() {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.interimResults = false;
+            recognition.lang = 'en-US';
+
+            $("#voiceInput").click(function() {
+                recognition.start();
+            });
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                $("#text").val(transcript);
+                $("#messageArea").submit();
+            };
+
+            recognition.onspeechend = function() {
+                recognition.stop();
+            };
+
             $("#messageArea").on("submit", function(event) {
                 const date = new Date();
                 const hour = date.getHours();
