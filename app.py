@@ -1,4 +1,4 @@
-from flask import Flask, render_template,jsonify,request
+from flask import Flask, render_template, jsonify, request, send_file
 from src.helper import download_hugging_face_embedding
 from langchain.vectorstores import Pinecone
 from pinecone import Pinecone
@@ -13,7 +13,7 @@ from langchain_huggingface import HuggingFaceEndpoint
 from huggingface_hub import login  
 from src.prompt import *
 from dotenv import load_dotenv
-
+from text_to_speech import text_to_speech
 
 
 app = Flask(__name__)
@@ -24,7 +24,6 @@ PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 
 embeddings = download_hugging_face_embedding()
 
-
 pc = Pinecone(api_key=PINECONE_API_KEY)
 
 index_name = "mchatbot" # index name created in pinecone
@@ -34,11 +33,10 @@ index = pc.Index('mchatbot')
 # Define the Pinecone vector store for Langchain
 docsearch = PineconeVectorStore(index=index, embedding=embeddings, text_key="text")
 
-PROMPT=PromptTemplate(template=prompt_template, input_variables=["context", "question"])
-chain_type_kwargs={"prompt": PROMPT}
+PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
+chain_type_kwargs = {"prompt": PROMPT}
 
-
-KEY=os.getenv("HUGGINGFACE_API_KEY")
+KEY = os.getenv("HUGGINGFACE_API_KEY")
 
 login(KEY)
 llm = HuggingFaceEndpoint(
@@ -77,23 +75,31 @@ def clean_response(text):
             seen.add(sentence.strip())
     
     cleaned_text = ' '.join(cleaned_sentences).strip()
+
+    # Add the disclaimer about consulting a doctor
+    disclaimer = "Please remember, while I strive to provide accurate and helpful advice, it's important to consult with a healthcare professional before starting any medication. Your health and safety are my top priorities!"
+    cleaned_text += disclaimer
+
     return cleaned_text
 
-
-# Define the index route to serve the chat HTML page
 @app.route("/")
 def index():
     return render_template('chat.html')
 
-# Define the chat route to handle POST requests
-@app.route("/get", methods=["GET", "POST"])
+@app.route("/get", methods=["POST"])
 def chat():
     msg = request.form["msg"]
     result = qa({"query": msg})
     answer = clean_response(result["result"])
-    print("Response:", answer)
-    return str(answer)
+    audio_file = text_to_speech(answer)
+    audio_url = f"/audio/{os.path.basename(audio_file)}"
+    return jsonify({"text": answer, "audio": audio_url})
 
-# Run the Flask app
+@app.route('/audio/<filename>', methods=["GET"])
+def get_audio(filename):
+    audio_path = os.path.join("audio", filename)  # Assume the audio files are stored in the 'audio' directory
+    return send_file(audio_path, mimetype="audio/mpeg")
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)
