@@ -1,8 +1,14 @@
-# 🩺 End-to-End Medical Chatbot using Llama3
-Welcome to the End-to-End Medical Chatbot using Llama3 project! This project showcases a comprehensive medical chatbot built using advanced technologies to assist users with medical inquiries.
+# 🩺 End-to-End Medical Chatbot with Voice Assistant using Llama3
+Welcome to the End-to-End Medical Chatbot using Llama3 project! This project showcases a comprehensive medical chatbot built using advanced technologies to assist users with medical inquiries. It also includes a Voice Assistant that allows users to interact with the bot using voice commands.
 
 ## 📋 Project Overview
 This chatbot leverages the power of the Llama3 model from Hugging Face to provide intelligent and context-aware responses. It integrates with Pinecone for vector database operations and is developed using Flask for a seamless web interface.
+
+## 🎯 Features
+- 🧠 LLM-Powered Responses: The chatbot uses an advanced language model to understand and respond to user queries.
+- 🎤 Voice Input: Interact with the bot using your voice, making the experience more accessible and user-friendly.
+- ⚡ Real-Time Responses: Get instant answers to your questions without any delay.
+- 💬 Interactive UI: Enjoy a visually appealing and easy-to-navigate interface that enhances your interaction with the bot.
 
 ## 🚀 How to Run
 Follow these steps to get the project up and running on your local machine:
@@ -61,11 +67,14 @@ python app.py
 - Hugging Face Hub
 - Pinecone
 
-## 📸 Screenshots
+## 🤝 Contributing
+Feel free to fork this repository, make improvements, and submit pull requests. Your contributions are always welcome!
 
-Here is a screenshot of the application:
+## 📸 Video
 
-![mchatb](https://github.com/user-attachments/assets/8b81760c-f299-4637-9c6f-e0745b55a595)
+Here is a Video of the application:
+
+![Recording2024-08-24214245-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/83ffabe6-36d2-49fc-bcac-7e97f4a9c692)
 
 ## License
 
