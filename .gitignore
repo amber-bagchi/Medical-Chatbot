@@ -160,3 +160,6 @@ cython_debug/
 #.idea/
 src/__pycache__/prompt.cpython-38.pyc
 .env
+audio/output.mp3
+audio/response.mp3
+data/medicalbook2.pdf

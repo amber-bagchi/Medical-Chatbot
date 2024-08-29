@@ -14,6 +14,7 @@ from huggingface_hub import login
 from src.prompt import *
 from dotenv import load_dotenv
 from text_to_speech import text_to_speech
+from src.helper import appointment_manager
 
 
 app = Flask(__name__)
@@ -99,6 +100,18 @@ def chat():
 def get_audio(filename):
     audio_path = os.path.join("audio", filename)  # Assume the audio files are stored in the 'audio' directory
     return send_file(audio_path, mimetype="audio/mpeg")
+
+
+@app.route("/book_appointment", methods=["POST"])
+def book_appointment():
+    doctor_name = request.form["doctor_name"]
+    patient_name = request.form["patient_name"]
+    desired_time = request.form["desired_time"]
+    
+    # Convert desired_time to proper format (ISODate)
+    response = appointment_manager.book_appointment(doctor_name, patient_name, desired_time)
+    
+    return jsonify({"text": response})
 
 
 if __name__ == '__main__':

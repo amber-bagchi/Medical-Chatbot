@@ -3,6 +3,56 @@ from langchain_community.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from pinecone import Pinecone
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+
+
+
+class AppointmentManager:
+    def __init__(self, uri, db_name):
+        self.client = MongoClient(uri)
+        self.db = self.client[db_name]
+
+    def close(self):
+        self.client.close()
+
+    def check_availability(self, doctor_name, desired_time):
+        doctor = self.db.doctors.find_one({"doctor_name": doctor_name})
+        if not doctor:
+            return False, "Doctor not found."
+        
+        # Check if an appointment already exists for the desired time
+        existing_appointment = self.db.appointments.find_one({
+            "doctor_id": doctor["_id"],
+            "appointment_time": desired_time
+        })
+        
+        if existing_appointment:
+            return False, "The desired time is not available. Please choose another time."
+        
+        return True, None
+
+    def book_appointment(self, doctor_name, patient_name, desired_time):
+        is_available, message = self.check_availability(doctor_name, desired_time)
+        if not is_available:
+            return message
+        
+        doctor = self.db.doctors.find_one({"doctor_name": doctor_name})
+        
+        # Create a new appointment
+        self.db.appointments.insert_one({
+            "doctor_id": doctor["_id"],
+            "patient_name": patient_name,
+            "appointment_time": desired_time,
+            "appointment_status": "confirmed"
+        })
+        
+        return f"Your appointment is confirmed with {doctor_name} at {desired_time}."
+
+
+appointment_manager = AppointmentManager("mongodb://localhost:27017", "medical_db")
+
+
 
 #functions for extracting the data
 def load_pdf(data):

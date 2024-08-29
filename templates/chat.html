@@ -72,6 +72,44 @@
                   </button>
                 </div>
               </form>
+
+              <!-- Appointment booking form -->
+              <form id="appointmentForm" class="input-group mt-3">
+                <input
+                  type="text"
+                  id="doctor_name"
+                  name="doctor_name"
+                  placeholder="Doctor's name"
+                  autocomplete="off"
+                  class="form-control type_msg"
+                  required
+                />
+                <input
+                  type="text"
+                  id="patient_name"
+                  name="patient_name"
+                  placeholder="Your name"
+                  autocomplete="off"
+                  class="form-control type_msg"
+                  required
+                />
+                <input
+                  type="datetime-local"
+                  id="desired_time"
+                  name="desired_time"
+                  class="form-control type_msg"
+                  required
+                />
+                <div class="input-group-append">
+                  <button
+                    type="submit"
+                    id="bookAppointment"
+                    class="input-group-text send_btn"
+                  >
+                    Book Appointment
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -140,6 +178,36 @@
             $("#messageFormeight").append($.parseHTML(botHtml));
           });
           event.preventDefault();
+        });
+
+        // Appointment booking form submission
+        $("#appointmentForm").on("submit", function (event) {
+          event.preventDefault();
+          var doctorName = $("#doctor_name").val();
+          var patientName = $("#patient_name").val();
+          var desiredTime = $("#desired_time").val();
+
+          // Send appointment details to the server
+          $.ajax({
+            data: {
+              doctor_name: doctorName,
+              patient_name: patientName,
+              desired_time: desiredTime,
+            },
+            type: "POST",
+            url: "/book_appointment",
+          }).done(function (data) {
+            var appointmentResponseHtml =
+              '<div class="d-flex justify-content-start mb-4 align-items-center"><div class="img_cont_msg"><img src="https://img.freepik.com/premium-vector/nurse-vector_423075-450.jpg" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' +
+              data.text +
+              "</div></div>";
+            $("#messageFormeight").append($.parseHTML(appointmentResponseHtml));
+
+            // Clear the appointment form fields
+            $("#doctor_name").val("");
+            $("#patient_name").val("");
+            $("#desired_time").val("");
+          });
         });
       });
 
