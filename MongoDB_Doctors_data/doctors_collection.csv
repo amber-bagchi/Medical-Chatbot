@@ -1,0 +1,101 @@
+_id,doctor_name,doctor_department,doctor_sitting_time
+29ee442a-3ef1-4072-88a1-55d7fd5c19c2,Dr. Elizabeth Weaver,"Psychologist, counselling",03:00:36 - 09:45:30
+454d2485-782c-498f-ac23-cc9e675cfa56,Dr. Jasmine Wolfe,"Optician, dispensing",13:08:31 - 23:24:50
+96605441-13d4-4306-be71-1e5e2ec08626,Dr. Christopher Bennett,Land,07:13:40 - 14:12:07
+6b3bfd47-8e6c-48ad-8f70-6a7a0b3d36d2,Dr. John Higgins,Company secretary,21:50:47 - 23:36:58
+7987679b-d320-4444-aa74-1a609e99baa0,Dr. Jill Fuller,Special effects artist,09:32:28 - 15:18:28
+6c345d2f-61be-4fdb-b271-f648b4e0ef21,Dr. Gina Mclean,Insurance broker,11:54:33 - 05:38:09
+46302fc8-1624-4774-9473-eb50b094384f,Dr. Monica Ward,Petroleum engineer,02:07:11 - 20:29:37
+e74128ea-5a54-49be-aba5-776bc064a0ce,Dr. Michael Weaver,Planning and development surveyor,06:49:02 - 01:40:58
+47886662-9ccd-40d9-82a0-21d6848c7be7,Dr. Doris Sims,Public house manager,19:14:49 - 21:17:32
+32c9398a-f96d-42e2-979e-b972e417e797,Dr. Roberto Edwards,"Secretary, company",10:04:13 - 19:57:25
+96e1b945-fff8-4087-94bc-9b0098d1d72f,Dr. Abigail Jones,Radio broadcast assistant,06:06:58 - 12:25:21
+af883ba8-a022-4f7d-a46e-ea47adfd4c0b,Dr. Mark Gibbs,Recycling officer,07:35:50 - 06:40:47
+28223d63-7ee1-4e32-86fd-bd66c953bf5d,Dr. Jordan Hunt,"Accountant, chartered",02:09:30 - 20:52:42
+abe77e7d-5f77-4db2-a5fa-31cef3f77ab8,Dr. Jessica Frederick,English as a foreign language teacher,10:59:39 - 03:44:49
+0f52d9ba-fca2-4b21-87c7-ebd7750ed607,Dr. Sean Hill,Immunologist,14:03:14 - 16:33:54
+84e7206a-3b1a-40bc-97ca-bfbf5c2f8d2e,Dr. Dorothy West,Quarry manager,20:39:05 - 08:28:16
+e61cf995-cd63-4bf6-8afb-cde8c6aa4146,Dr. Mrs. Angela Jimenez,Magazine journalist,07:21:57 - 05:23:39
+6165fea9-5ac6-4162-9235-9e1e00b4be55,Dr. Joshua Greene,"Therapist, art",21:47:33 - 03:12:08
+bdeb3c84-96c8-4ab6-ae6c-a8c592a38a0e,Dr. Nicole Sharp,"Administrator, arts",17:21:21 - 23:13:10
+f00834ff-24d8-4b01-88ce-bdd4e12e585f,Dr. Samuel Barron,Cytogeneticist,18:45:09 - 03:47:35
+839d92eb-7e36-4028-bf62-4473fa21c4a4,Dr. Holly Butler,Sports administrator,19:16:21 - 01:07:08
+f4ab5c4a-3dc3-4ca2-969d-a0ddfaf29fad,Dr. Joseph Norman,Chief Strategy Officer,00:38:33 - 19:08:07
+6d743d29-b59a-4938-8dd0-72ae01d099f3,Dr. Matthew Krause,"Lighting technician, broadcasting/film/video",16:27:23 - 04:28:18
+a890bc63-aeee-48f3-90cd-4ddcdc6b6d40,Dr. Julie Kane,"Administrator, education",12:21:37 - 08:03:40
+a732aa66-0d95-4d76-88e5-2ee21fcbe4b0,Dr. Jason Graham,Publishing copy,14:40:56 - 22:15:29
+2f7067bf-3f22-460d-8caf-76784c772057,Dr. Linda Moran,Electronics engineer,21:51:29 - 22:07:16
+633426f4-ec68-40d5-8253-9ac661d48f75,Dr. Abigail Kelly,English as a foreign language teacher,02:20:56 - 20:40:27
+daaed838-3349-492a-84b5-20d045a88650,Dr. Brianna Knapp,"Designer, interior/spatial",01:13:06 - 15:00:09
+d1b1d2c3-6ccd-4841-888e-8d725b155d85,Dr. William Vargas,Careers information officer,10:31:51 - 08:43:43
+4d89b3e5-a694-4701-9c3c-0307fc14dccc,Dr. Alexis Ruiz,Cytogeneticist,20:35:09 - 13:18:53
+182f97e7-9916-4372-b7b4-e404f5ce9571,Dr. Elizabeth Cummings,Insurance underwriter,12:31:02 - 03:24:03
+27896e0d-6f12-4642-aef6-1d0fb5329cef,Dr. Melissa King,Glass blower/designer,11:46:15 - 15:03:49
+d5eb4753-d347-4e33-be86-bac981c387ab,Dr. Sarah Jenkins,Chartered accountant,06:55:07 - 01:13:46
+8e4c5cd1-8a5a-48fe-99bc-b94df4a2aeef,Dr. Debra Medina,Chiropodist,01:06:37 - 08:46:21
+7add23f9-c4d1-4fd0-9e63-5616746eaa05,Dr. Virginia Lee,Geographical information systems officer,23:08:56 - 03:13:31
+f3835a53-7f26-4dcb-988f-9a676ec27afb,Dr. Natalie Rosales,Rural practice surveyor,17:53:37 - 23:18:10
+14d75aad-6828-43bf-81ba-ef50495e2866,Dr. Megan Webb,Animator,12:16:23 - 10:07:41
+08fd8669-b22a-4f8d-918d-44dd08b48f48,Dr. Patricia Wallace,Careers information officer,16:46:28 - 11:49:32
+41b3ee6f-fc37-4557-869b-a3fe89b65986,Dr. Heidi Rogers,"Teacher, primary school",07:09:19 - 19:17:42
+b018e323-5c32-41ec-9c59-9cb69813e782,Dr. Leah Larson,"Pharmacist, hospital",05:24:17 - 18:15:06
+806455c2-ffc7-403e-a2aa-2b0cb63797c8,Dr. Michael Joseph,Games developer,08:22:17 - 08:43:38
+85724c41-c890-409a-b06f-174db452ac7c,Dr. Yvette Stuart,"Surveyor, building control",05:04:22 - 12:37:45
+ce0dfa73-290e-4992-80b0-c7bfc1c9685f,Dr. James Martinez,Sports administrator,18:05:46 - 20:23:00
+8c4cb4b7-09ab-42ce-a747-79b2c4051e82,Dr. Michael Sullivan,Neurosurgeon,15:35:33 - 19:39:37
+369b7bad-a3c3-4e9e-83ff-a30d65fc80b1,Dr. Jack Cobb,Sports therapist,04:36:17 - 19:40:52
+77adab41-f37b-461a-bc93-0865a20b1415,Dr. Robert Weaver,Pathologist,23:10:43 - 09:21:55
+71a7fa80-6042-4e6e-82e7-41c196fa246f,Dr. Terry Jones,"Runner, broadcasting/film/video",02:39:31 - 23:15:17
+30139b7d-5de2-442f-93e3-0c14070e0b8a,Dr. Tanya Smith,Travel agency manager,18:36:39 - 11:24:22
+7839f1bb-bc61-4e33-8e1c-84fe11f7d455,Dr. Joshua Johnson,Acupuncturist,18:09:58 - 17:13:49
+3c206901-f610-41b5-871d-630645902857,Dr. Theodore Robinson,Office manager,03:37:19 - 21:38:29
+3e335453-664a-440e-a7a3-bc825a5bf8a7,Dr. Carol Reid,"Designer, industrial/product",01:24:04 - 07:38:50
+eb1a9741-4ef0-450f-a2ba-c71bcb9cc72f,Dr. Stephen Walker,Volunteer coordinator,01:35:23 - 08:42:19
+4f38e38c-2021-4fce-947f-bea584309408,Dr. Andrew Vasquez,Energy manager,13:48:12 - 20:16:58
+8d2b56d5-2921-4b67-9531-4f4bc67b9a49,Dr. Charles Ford,Historic buildings inspector/conservation officer,21:13:47 - 11:10:43
+8b2a6ee2-0f36-4235-b217-5132244f1d1d,Dr. Sandra Black,Housing manager/officer,22:24:07 - 10:17:44
+97aa4467-c1f7-4a68-8a96-4d3458c616ff,Dr. Brian Hawkins,"Engineer, land",16:10:49 - 01:18:18
+eac9f090-f377-492a-b99b-5e7e31fc61ee,Dr. Michael Martinez,"Research officer, trade union",21:25:50 - 12:35:05
+eefadd22-aa6e-495a-bd52-3d206bf9fb6d,Dr. James Collins,Furniture designer,04:19:21 - 07:13:13
+d57560c3-ac58-40b0-91ce-5108863f2e78,Dr. Samantha Black,Public relations officer,16:18:07 - 00:06:24
+1ad4460b-31ac-4ab5-9e1f-df69771d5d8d,Dr. William Clark,Outdoor activities/education manager,08:51:50 - 11:00:22
+b68e0572-ab69-47d6-8aec-2b6816d68074,Dr. Douglas Morrison,"Designer, television/film set",13:48:58 - 06:16:45
+708d7872-e03c-49f5-98ab-bd91301cfd7c,Dr. Amber Kim,Architect,08:04:05 - 01:51:12
+de1249ee-4324-4b37-9d09-fb37728a6d61,Dr. Sharon Gonzalez,Television floor manager,20:51:59 - 04:41:08
+1cc12f1e-c895-4f91-8970-cd6e591378bc,Dr. Angela Mendoza,Editorial assistant,22:17:16 - 15:31:42
+ad11d606-5f16-4cff-925e-7e0279c78a54,Dr. Emma Garza,Geophysical data processor,12:31:10 - 04:45:13
+757c4461-7cdb-48b4-a329-915a6760f526,Dr. Anthony Bradley,Museum/gallery exhibitions officer,07:41:06 - 14:05:29
+9db62552-4d78-4282-bd99-dde7809ad53d,Dr. Kathleen Gibson,Electronics engineer,07:14:27 - 17:37:25
+1533ed2f-346d-4930-a788-1b4c508b575c,Dr. Savannah Robinson DDS,Sports development officer,02:45:19 - 11:32:43
+dbac89f3-35c1-45fd-ac2c-f234552712d7,Dr. Matthew Jenkins,Exercise physiologist,21:48:44 - 03:59:39
+edd75bdb-b8ce-44bd-a1d8-f366a9e817d1,Dr. Sean Nelson,"Librarian, public",05:59:16 - 21:43:13
+8871cf6b-7b65-4a4a-a109-f8bbac02ca75,Dr. Kathleen Shannon,Airline pilot,06:09:34 - 00:23:56
+23078815-8b45-4fcb-b392-7d7b5d47b640,Dr. Victoria Lyons,Ambulance person,18:11:02 - 08:56:31
+1f44805b-df74-436d-8b37-cba5f4419b89,Dr. Shawn Chen,Copy,17:23:21 - 16:23:00
+8c876c81-7f75-427c-8ac0-b8060e535e8c,Dr. Patrick Jacobson,Museum/gallery exhibitions officer,10:36:39 - 11:37:11
+d8d18ff4-dc26-449f-bf26-aee961025c90,Dr. Tina Perry,"Psychologist, occupational",20:19:38 - 10:13:24
+78720a8d-ef3a-48b2-b0dc-abf76ec2be2b,Dr. Danielle Jackson,Waste management officer,01:41:17 - 04:23:03
+1c14c80e-dbaf-430b-afd4-6aafe44618c6,Dr. Ryan Holt,Manufacturing systems engineer,11:50:19 - 13:37:17
+a6d6d5f4-1622-43b8-a862-2fb3f3738a0e,Dr. Jay Carroll,"Scientist, research (life sciences)",01:28:29 - 18:19:38
+edca5a61-f00c-4dd6-ae50-d969106fcd71,Dr. James Neal,Print production planner,02:03:48 - 01:03:54
+119a27f0-e503-4e06-b625-2f674fa364c7,Dr. Charles Forbes IV,Exercise physiologist,13:20:52 - 13:54:40
+d6802e38-daf0-4076-b79e-923bf8cf23aa,Dr. Gregory Gordon,Retail banker,09:27:35 - 18:47:26
+1911927a-6040-40b5-86be-762de092cb4b,Dr. Dillon Petty,Warden/ranger,15:32:48 - 23:16:28
+2c417a1c-25fe-40d8-8d5e-785413db9374,Dr. Robert Washington,Geographical information systems officer,20:16:25 - 17:16:28
+b5f7e187-a449-4074-a03c-5c16b5b1a9a1,Dr. Steven Wilson,Clothing/textile technologist,19:40:26 - 14:35:21
+7979b6cb-b1b0-4a02-bd13-72f4e5dbf97c,Dr. Nancy Holt,Forensic psychologist,14:25:49 - 01:53:53
+c24da24c-c197-4171-9c38-14109039bd5e,Dr. Ricky Frost,"Engineer, agricultural",05:08:36 - 03:58:28
+9395a94b-d5d8-4de2-8b91-4207152d5971,Dr. Kyle Thomas,"Psychologist, forensic",22:23:58 - 07:39:39
+0b17d176-b9d0-481e-84e8-887270444f91,Dr. Michael Foster,Telecommunications researcher,21:01:20 - 22:47:35
+655a2e49-e4e7-482d-8c05-296e42278e5f,Dr. Maurice Hill,"Psychotherapist, dance movement",22:50:20 - 01:05:42
+afcc1183-2341-4ddb-9d18-58d7245145ec,Dr. Ronald Mcdonald,Information systems manager,13:28:20 - 08:39:31
+d82c46c3-09a4-4435-a3a1-0d95a46f678a,Dr. Angela Gutierrez,"Psychologist, counselling",10:29:58 - 10:19:52
+e99cd327-886c-4dd5-91c3-d42cc9236e32,Dr. Samantha Daniel,IT trainer,17:15:32 - 02:21:07
+065b3613-b46e-4b9d-ad28-3e9485b73c63,Dr. Sandra Allen,"Restaurant manager, fast food",06:58:37 - 23:00:55
+48998f4b-48fe-41ca-8e3a-816d5addd568,Dr. Wyatt Watts,Commercial art gallery manager,18:23:51 - 01:57:59
+147f769d-6e20-49fd-a7cf-8f7233581ba5,Dr. Randall Munoz,"Administrator, sports",07:31:41 - 10:20:41
+2278651b-f4d4-446d-81b3-3a52267ce390,Dr. Tina Rodriguez,Heritage manager,13:07:17 - 12:20:17
+995aa02a-1198-4b4b-8274-a5831c475e65,Dr. Christian Dillon,Historic buildings inspector/conservation officer,12:05:51 - 21:00:25
+45b665e5-1c33-4cc1-867c-c7fec03242f2,Dr. Ruben Brown,Geochemist,05:03:24 - 07:14:24
+2b08def4-9d0c-45d4-8cc9-7a240bb1184c,Dr. Paul Mccarthy,"Physicist, medical",20:54:53 - 10:51:05
+3be31aac-5656-4278-ba3a-e0c26a2be4cd,Dr. Rebecca Rivera,Social worker,10:49:20 - 23:07:06

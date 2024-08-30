@@ -17,6 +17,8 @@ list_of_files = [
     "store_index.py",
     "static/.gitkeep",
     "templates/chat.html"
+    "text_to_speech.py"
+    "database_neo4j.py"
 
 ]
 

@@ -7,4 +7,5 @@ pypdf
 python-dotenv
 pandas
 pymongo
+neo4j
 -e .
