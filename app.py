@@ -15,6 +15,8 @@ from src.prompt import *
 from dotenv import load_dotenv
 from text_to_speech import text_to_speech
 from src.helper import appointment_manager
+from database_neo4j import db_manager
+from database_neo4j import HospitalDatabaseManager
 
 
 app = Flask(__name__)
@@ -89,12 +91,24 @@ def index():
 
 @app.route("/get", methods=["POST"])
 def chat():
-    msg = request.form["msg"]
-    result = qa({"query": msg})
-    answer = clean_response(result["result"])
-    audio_file = text_to_speech(answer)
+    msg = request.form["msg"].lower()  # Convert to lowercase for easier matching
+    response_text = ""
+    
+    # Determine if the user's query is about hospital services or doctors
+    if "services" in msg:
+        response_text = db_manager.get_services_info()
+    elif "doctors" in msg or "doctor" in msg:
+        response_text = db_manager.get_doctors_info()
+    else:
+        # If not a direct request for hospital info, query the LLM
+        result = qa({"query": msg})
+        response_text = clean_response(result["result"])
+    
+    # Generate the audio response
+    audio_file = text_to_speech(response_text)
     audio_url = f"/audio/{os.path.basename(audio_file)}"
-    return jsonify({"text": answer, "audio": audio_url})
+    
+    return jsonify({"text": response_text, "audio": audio_url})
 
 @app.route('/audio/<filename>', methods=["GET"])
 def get_audio(filename):

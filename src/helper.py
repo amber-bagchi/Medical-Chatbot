@@ -5,6 +5,7 @@ from langchain_community.embeddings import SentenceTransformerEmbeddings
 from pinecone import Pinecone
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+import os
 
 
 
@@ -49,8 +50,9 @@ class AppointmentManager:
         
         return f"Your appointment is confirmed with {doctor_name} at {desired_time}."
 
-
-appointment_manager = AppointmentManager("mongodb://localhost:27017", "medical_db")
+mongo_uri = os.getenv("MONGO_URI")
+mongo_db = "medical_db"
+appointment_manager = AppointmentManager(mongo_uri, mongo_db)
 
 
 
